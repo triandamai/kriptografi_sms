@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail_pesan">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app"
+        android:layout_width="match_parent"
+        android:background="@color/transparan"
+        android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue">
+                <LinearLayout
+                    android:id="@+id/btn_maintab_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_left_arrow" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_maintab_judul_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Toolbar"
+                    android:textSize="18sp"/>
+
+            </android.support.v7.widget.Toolbar>
+           </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/app"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_no_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="ini no"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="monospace"/>
+                    <TextView
+                        android:layout_below="@+id/tv_no_detail"
+                        android:id="@+id/tv_ini_detail"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="match_parent"
+                        android:minHeight="40dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:text="ini isi pesan"
+                        />
+                    <LinearLayout
+                        android:layout_below="@+id/tv_ini_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/et_key_detail"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:backgroundTint="@color/blue"
+                            android:hint="key"/>
+                        <Button
+                            android:id="@+id/baca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:fontFamily="monospace"
+                            android:background="@drawable/bottom_rect"
+                            android:text="baca"
+                            android:textColor="@color/putih"/>
+                        <Button
+                            android:id="@+id/balas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:fontFamily="monospace"
+                            android:background="@drawable/bottom_rect"
+                            android:text="balas"
+                            android:textColor="@color/putih"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

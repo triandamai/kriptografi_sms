@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ebook.trian.kripto">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Home_page"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Caesar.Frag_Enc_caesar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Frag_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Caesar.Frag_Dec_caesar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Vigenere.Frag_Enc_Vigenere"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Vigenere.Frag_Dec_vigenere"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Page_sms"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".MessageReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Daftar_inbox"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Detail_pesan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Vigenere_tab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Caesar_tab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Frag_About"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splash_screen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Frag_awal"></activity>
+    </application>
+
+</manifest>
